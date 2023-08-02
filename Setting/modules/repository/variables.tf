@@ -6,7 +6,7 @@ variable "repository" {
 
 variable "public" {
   type = bool
-  default = true
+  default = false
 }
 
 variable "auto_init" {
@@ -39,6 +39,7 @@ variable "require_code_owner_reviews" {
 
 variable "required_approving_review_count" {
   type = number
+  default = 2
 }
 
 variable "require_signed_commits" {

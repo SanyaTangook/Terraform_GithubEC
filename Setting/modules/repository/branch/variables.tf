@@ -20,6 +20,7 @@ variable "require_code_owner_reviews" {
 
 variable "required_approving_review_count" {
   type    = number
+  default = 2
 }
 
 variable "repository" {

@@ -10,8 +10,10 @@ terraform {
 # --- repository ---
 resource "github_repository" "repository" {
   name       = var.repository
+  # checkov:skip=CKV2_GIT_1:Ensure each Repository has branch protection associated
   auto_init  = var.auto_init
   visibility = local.visibility
+  vulnerability_alerts = true
   lifecycle {
     create_before_destroy = true
   }

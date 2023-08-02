@@ -9,6 +9,6 @@ terraform {
 
 
 provider "github" {
-  token = "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"
+  token = "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"
   owner = "uoio1"
 }

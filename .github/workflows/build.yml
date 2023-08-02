@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run:
-              working-directory: ./Setting
+              working-directory: ./Setting/prod
         steps:
         - name: code checkout
           uses: actions/checkout@v3

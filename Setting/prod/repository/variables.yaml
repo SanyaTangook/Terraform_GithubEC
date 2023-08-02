@@ -1,0 +1,51 @@
+repo:
+  public: true
+  auto_init: true
+  
+branch: [
+   "develop",
+   "test",
+   "dev1"
+]
+branch_protection:
+  branch_protection: [
+    "main",
+    "test",
+    "develop"
+  ]
+  required_status_checks: true
+  require_signed_commits: true
+  dismiss_stale_reviews: true
+  require_code_owner_reviews: true
+  required_approving_review_count: 2
+
+repository:
+  agile-development-methodology: 
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "develop"]
+  python-web-frameworks:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "develop"]
+  automated-testing-tools:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "develop"]
+  microservices-architecture:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "develop"]
+  nosql-databases-comparison:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "develop"]
+  sql-query-optimization:
+    DBA: "Read"
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "test"]  
+  database-backup-solutions:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "test"]  
+  data-warehousing-best-practices:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "test"]  
+  database-performance-tuning:
+    branch: [ "develop","test","dev1"]
+    branch_protection: [ "main" , "test"]    
+

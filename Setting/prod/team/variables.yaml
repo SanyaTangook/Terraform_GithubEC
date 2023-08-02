@@ -1,0 +1,15 @@
+user:
+  SanyaTangook:
+    SWE: "maintainer"
+    DBA: "maintainer"
+  Nutty:
+    SWE: "member"
+    DBA: "maintainer"
+
+team:
+  SWE:
+    closed: true
+    parent_team: "All"
+  DBA:
+    closed: false
+    parent_team: 

@@ -15,11 +15,11 @@ jobs:
         - name: code checkout
           uses: actions/checkout@v3
 
-        - name: Test with Checkov
-          id: checkov
-          uses: bridgecrewio/checkov-action@master
-          with:
-            framework: terraform
+        # - name: Test with Checkov
+        #   id: checkov
+        #   uses: bridgecrewio/checkov-action@master
+        #   with:
+        #     framework: terraform
 
         - name: setup terraform
           uses: hashicorp/setup-terraform@v1

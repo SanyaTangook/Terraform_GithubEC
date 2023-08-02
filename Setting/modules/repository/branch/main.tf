@@ -14,6 +14,7 @@ resource "github_branch" "branch" {
 
 resource "github_branch_protection" "branch_protection" {
   for_each               = toset(var.branch_protection)
+  # checkov:skip=CKV_GIT_5:GitHub pull requests should require at least 2 approvals
   repository_id          = var.repository
   pattern                = each.key
   require_signed_commits = var.require_signed_commits

@@ -11,6 +11,7 @@ terraform {
 resource "github_repository" "repository" {
   name       = var.repository
   # checkov:skip=CKV2_GIT_1:Ensure each Repository has branch protection associated
+  # checkov:skip=CKV_GIT_1:Ensure GitHub repository is Private
   auto_init  = var.auto_init
   visibility = local.visibility
   vulnerability_alerts = true

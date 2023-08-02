@@ -1,0 +1,45 @@
+name: Run Terraform Setting
+
+on:
+    push:
+        branches:
+            - "main"
+
+jobs:
+    Terraform-Script:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+              working-directory: ./Setting
+        steps:
+        - name: code checkout
+          uses: actions/checkout@v3
+
+        - name: Test with Checkov
+          id: checkov
+          uses: bridgecrewio/checkov-action@master
+          with:
+            framework: terraform
+
+        - name: setup terraform
+          uses: hashicorp/setup-terraform@v1
+
+        - name: terraform init
+          id: init
+          run: terraform init -input=false
+
+        - name: terraform validate
+          id: validate
+          run: terraform validate -no-color
+
+        - name: terraform fmt
+          id:   fmt
+          run: terraform fmt
+
+        - name: terraform plan
+          id: plan
+          run: terraform plan -no-color -input=false
+
+        - name: terraform apply
+          id: apply
+          run: terraform apply -input=false -auto-approve

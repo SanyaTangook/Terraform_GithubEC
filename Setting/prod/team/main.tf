@@ -20,7 +20,7 @@ locals {
 # }
 
 module "team" {
-  source = "../../modules/team"
+  source   = "../../modules/team"
   for_each = local.config.team
 
   team_name   = each.key

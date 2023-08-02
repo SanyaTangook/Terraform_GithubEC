@@ -4,7 +4,7 @@ locals {
 
 
 module "repository" {
-  source = "../../modules/repository"
+  source   = "../../modules/repository"
   for_each = local.config.repository
 
   repository                      = each.key

@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"repository","Source":"../modules/repository","Dir":"../modules/repository"},{"Key":"repository.branch","Source":"./branch","Dir":"../modules/repository/branch"},{"Key":"team","Source":"../modules/team","Dir":"../modules/team"},{"Key":"team_repo","Source":"../modules/team_repository","Dir":"../modules/team_repository"}]}

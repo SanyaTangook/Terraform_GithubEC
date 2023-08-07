@@ -1,0 +1,12 @@
+user:
+  SanyaTangook:
+    SWE: "maintainer"
+    DBA: "member"
+  Nutty:
+    SWE: "member"
+  dmakeroam:
+    SWE: "member"
+    DBA: "maintainer"
+  p_so:
+    ALL: "member"
+    DBA: "member"

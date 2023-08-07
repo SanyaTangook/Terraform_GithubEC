@@ -1,11 +1,12 @@
 # --- Team_member ---
-resource "github_team_members" "team_members" {
-  team_id    = "SWE"
+# resource "github_team_members" "team_members" {
+#   for_each = local.role
+#   team_id  = "DBA"
 
-  members {
-    username = var.username
-    role     = var.role
-  }
-}
+#   members {
+#     username = each.key
+#     role     = each.value
+#   }
+# }
 
 # ------------------

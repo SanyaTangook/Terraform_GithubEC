@@ -2,10 +2,11 @@ repo:
   public: false
   auto_init: true
   
-branch: [
+
+poilcy:
+  branch: [
    "develop"
-]
-branch_protection:
+  ]
   branch_protection: [
     "main",
     "develop"
@@ -20,7 +21,9 @@ repository:
   devops-github-action: 
     branch: ["develop"]
     branch_protection: ["main"]
-
+  devops-github: 
+    branch: []
+    branch_protection: []
 
 
 

@@ -1,12 +1,12 @@
-ALL:
-  closed: false
+ALL2:
+  closed: true
   parent_team: 
   description:
-SWE:
+SWE2:
   closed: true
   parent_team: "datax-all"
   description:
-DBA:
+DBA2:
   closed: true
   parent_team: "datax-all" 
   description:

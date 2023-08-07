@@ -8,8 +8,7 @@ module "team" {
   for_each = local.config.team
 
   team_name   = each.key
-  description = "test"
+  description = each.value["description"]
   parent_team = each.value["parent_team"]
-  member      = local.config.user
   closed      = each.value["closed"]
 }

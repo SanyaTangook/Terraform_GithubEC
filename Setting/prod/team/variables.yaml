@@ -1,22 +1,13 @@
-# user:
-#   SanyaTangook:
-#     SWE: "maintainer"
-#     DBA: "member"
-#   Nutty:
-#     SWE: "member"
-#   dmakeroam:
-#     SWE: "member"
-#     DBA: "maintainer"
-#   p_so:
-#     ALL: "member"
-#     DBA: "member"
 team:
   ALL:
     closed: false
     parent_team: 
+    description:
   SWE:
     closed: true
     parent_team: "datax-all"
+    description:
   DBA:
     closed: true
     parent_team: "datax-all" 
+    description:

@@ -1,4 +1,17 @@
-SanyaTangook:
-  SWE: "maintainer"
-  DBA: "member"
-  ALL: "maintainer"
+DBA:
+  SanyaTangook: "maintainer"
+  dmakeroam: "maintainer"
+  p_so: "member"
+
+# SanyaTangook:
+#   SWE: "maintainer"
+#   DBA: "maintainer"
+# Nutty:
+#   SWE: "member"
+#   DBA: "maintainer"
+# dmakeroam:
+#   ALL: "maintainer"
+#   SWE: "member"
+# p_so:
+#   SWE: "member"
+#   ALL: "member"

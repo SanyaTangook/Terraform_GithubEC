@@ -1,14 +1,10 @@
 locals {
-  config = yamldecode(file("${path.module}/variables.yaml"))
+  files = flatten([for i in fileset(".", "*.yaml") : yamldecode(file(i))])
 }
-
 
 module "team" {
   source   = "../../modules/team"
-  for_each = local.config.team
+  count = length(local.files)
 
-  team_name   = each.key
-  description = each.value["description"]
-  parent_team = each.value["parent_team"]
-  closed      = each.value["closed"]
+  data_team = local.files[count.index]
 }

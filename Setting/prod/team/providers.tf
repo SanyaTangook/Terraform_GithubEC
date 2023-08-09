@@ -6,12 +6,11 @@ terraform {
       version = "5.32.0"
     }
   }
-  backend "azurerm" {}
+  # backend "azurerm" {}
 }
 
-
-provider "github" {
-  token = var.github_org_token
-  owner = var.github_org_name
-}
+# provider "github" {
+#   token = var.github_org_token
+#   owner = var.github_org_name
+# }
 

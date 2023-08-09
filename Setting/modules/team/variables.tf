@@ -1,23 +1,7 @@
-# ------ Team ------
-variable "team_name" {
-  type = string
-}
-
-variable "description" {
-  type = string
-}
-
-variable "parent_team" {
-  type = string
-}
-
-
-
-variable "closed" {
-  type = bool
-}
-
-locals {
-  privacy = var.closed == true ? "closed" : "secret"
-  
+variable "data_team" {
+  type = map(object({
+    closed = bool
+    description = string
+    parent_team = string
+  }))
 }

@@ -1,11 +1,14 @@
 # --- Team_member ---
 resource "github_team_members" "team_members" {
-  team_id    = "SWE"
+  for_each = var.data_team_member
+  team_id  = each.key
 
-  members {
-    username = var.username
-    role     = var.role
+  dynamic "members" {
+    for_each = each.value
+    content {
+      username = members.key
+      role     = members.value
+    }
   }
 }
-
 # ------------------

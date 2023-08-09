@@ -1,6 +1,3 @@
-variable "username" {
-  type = string
+variable "data_team_member" {
+  type = map(map(string))
 }
- variable "role" {
-   type = string
- }

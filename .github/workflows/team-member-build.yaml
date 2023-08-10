@@ -1,4 +1,4 @@
-name: Run Terraform For Team Repository Permissions
+name: Run Terraform For Team Member Permissions
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-22.04
         defaults:
           run:
-            working-directory: ./Setting/prod/team_repository
+            working-directory: ./Setting/prod/team_member
         steps:
         - name: code checkout
           uses: actions/checkout@v3

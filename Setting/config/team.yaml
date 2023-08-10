@@ -1,6 +1,7 @@
 team:
-  name_team:          #String
-    member:           #String
-    closed: true      #bool
+  name_team:          
+    member:
+      neme:           #String
+    closed:           #bool
     parent_team:      #String 
     description:      #String

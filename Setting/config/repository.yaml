@@ -1,0 +1,21 @@
+repo:
+  public:                             #bool
+  auto_init:                          #bool
+  
+poilcy:
+  branch: []                          #list 
+  branch_protection: []               #list
+  required_status_checks:             #bool
+  require_signed_commits:             #bool
+  dismiss_stale_reviews:              #bool
+  require_code_owner_reviews:         #bool
+  required_approving_review_count:    #number and number > 2
+
+repository:
+  name-repository:    
+    branch: []
+    branch_protection: []               
+
+
+
+

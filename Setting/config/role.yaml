@@ -1,7 +1,19 @@
 team:
-  neme-team:
+  SWE:
     repository:
-      name-repository:  "permission"
+      agile-development-methodology: "Read"
+      python-web-frameworks: "Write"
+      automated-testing-tools: "Admin"
+      microservices-architecture: "Triage"
+      nosql-databases-comparison: "Maintain"
+  
+  DBA:
+    repository:
+      sql-query-optimization: "Read"
+      database-backup-solutions: "Write"
+      nosql-databases-comparison: "Admin"
+      data-warehousing-best-practices: "Triage"
+      database-performance-tuning: "Maintain"
       
       
 

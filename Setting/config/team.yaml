@@ -1,7 +1,25 @@
 team:
-  name_team:          
+  ALL:          
     member:
-      neme:           #String
-    closed:           #bool
-    parent_team:      #String 
-    description:      #String
+      p_so: "member"           
+    closed: false           
+    parent_team:       
+    description: 
+
+  SWE:          
+    member:
+      SanyaTangook: "maintainer"
+      Nutty: "member"
+      dmakeroam: "member"             
+    closed: true          
+    parent_team: "datax-all"       
+    description:  
+
+  DBA:
+    member:
+      SanyaTangook: "maintainer"
+      dmakeroam: "maintainer"
+      p_so: "member"           
+    closed: true           
+    parent_team: "datax-all"       
+    description:    

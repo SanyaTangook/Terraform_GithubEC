@@ -1,8 +1,6 @@
 locals {
-  config = yamldecode(file("${path.module}/variables.yaml"))
-  files  = flatten([for i in fileset(".", "*.yaml") : yamldecode(file(i))])
+  files = [for i in fileset("D:/test_terraform/Setting/config/team", "*.yaml") : yamldecode(file("D:/test_terraform/Setting/config/team/${i}"))]
 }
-
 
 
 module "team_member" {

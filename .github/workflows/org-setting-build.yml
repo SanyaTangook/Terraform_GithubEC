@@ -1,11 +1,11 @@
-name: Run Terraform For Team Member Permissions
+name: Run Terraform for Organization Permissions
 
 on:
   push:
     branches:
     - "main"
     paths:
-    - 'Setting/prod/team_member/**'
+    - 'Setting/prod/org-setting/**'
 
 permissions: read-all
 jobs:
@@ -13,7 +13,7 @@ jobs:
         runs-on: ubuntu-22.04
         defaults:
           run:
-            working-directory: ./Setting/prod/team_member
+            working-directory: ./Setting/prod/org-setting
         steps:
         - name: code checkout
           uses: actions/checkout@v3
@@ -26,10 +26,10 @@ jobs:
         - name: read terraform backend configuration
           uses: mobiledevops/secret-to-file-action@v1
           with:
-            base64-encoded-secret: ${{secrets.TF_BACKEND_CONF_FOR_TEAM_REPOSITORY}}
+            base64-encoded-secret: ${{secrets.TF_BACKEND_CONF}}
             filename: "backend.conf"
             is-executable: false
-            working-directory: ./Setting/prod/team_member
+            working-directory: ./Setting/prod/org-setting
 
         - name: terraform init
           id: init

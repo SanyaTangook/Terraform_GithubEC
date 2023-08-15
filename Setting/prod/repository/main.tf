@@ -1,11 +1,9 @@
 locals {
-  config = yamldecode(file("${path.module}/variables.yaml"))
+  file = yamldecode(file("D:/test_terraform/Setting/config/repository/repository.yaml"))
 }
-
-
 module "repository" {
   source   = "../../modules/repository"
-  for_each = local.config.repository
+  for_each = local.file.repository
 
   repository                      = each.key
   public                          = local.config.repo.public

@@ -6,6 +6,7 @@ team:
       automated-testing-tools: "Admin"
       microservices-architecture: "Triage"
       nosql-databases-comparison: "Maintain"
+  
   DBA:
     repository:
       sql-query-optimization: "Read"

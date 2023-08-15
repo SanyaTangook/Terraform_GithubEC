@@ -16,4 +16,3 @@ resource "github_team" "team" {
   parent_team_id = each.value.parent_team
 }
 # ------------------
-

@@ -1,5 +1,5 @@
 locals {
-  files = [for i in fileset("D:/test_terraform/Setting-test/config/team", "*.yaml") : yamldecode(file("D:/test_terraform/Setting-test/config/team/${i}"))]
+  files = [for i in fileset("D:/test_terraform/Setting/config/team", "*.yaml") : yamldecode(file("D:/test_terraform/Setting/config/team/${i}"))]
 }
 
 

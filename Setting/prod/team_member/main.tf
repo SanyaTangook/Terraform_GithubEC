@@ -1,6 +1,7 @@
 locals {
-  files = yamldecode(file("D:/test_terraform/Setting-test/config/team/role"))
+  files = [for i in fileset("D:/test_terraform/Setting/config/team", "*.yaml") : yamldecode(file("D:/test_terraform/Setting/config/team/${i}"))]
 }
+
 
 module "team_member" {
   source = "../../modules/team_member"

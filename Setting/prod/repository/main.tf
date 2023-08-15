@@ -1,5 +1,5 @@
 locals {
-  file = yamldecode(file("D:/test_terraform/Setting-test/config/repository/repository.yaml"))
+  file = yamldecode(file("D:/test_terraform/Setting/config/repository/repository.yaml"))
 }
 module "repository" {
   source   = "../../modules/repository"

@@ -1,0 +1,25 @@
+# team:
+ALL2:          
+  member:
+    p_so: "member"           
+  closed: false           
+  parent_team:       
+  description: 
+
+SWE2:          
+  member:
+    SanyaTangook: "maintainer"
+    Nutty: "member"
+    dmakeroam: "member"             
+  closed: true          
+  parent_team: "datax-all"       
+  description:  
+
+DBA2:
+  member:
+    SanyaTangook: "maintainer"
+    dmakeroam: "maintainer"
+    p_so: "member"           
+  closed: true           
+  parent_team: "datax-all"       
+  description:    

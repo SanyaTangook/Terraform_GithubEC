@@ -4,7 +4,7 @@ resource "github_team_members" "team_members" {
   team_id  = each.key
 
   dynamic "members" {
-    for_each = each.value
+    for_each = each.value["member"]
     content {
       username = members.key
       role     = members.value

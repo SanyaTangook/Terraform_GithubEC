@@ -1,0 +1,19 @@
+team:
+  devops:
+    repository:
+      devops-tf-ghec: "Admin"
+      devops-github-action: "Admin"
+      devops-github-example: "Admin"
+  
+  devops-mfec:
+    repository:
+      devops-tf-ghec: "Maintain"
+      devops-github-action: "Read"
+      devops-github-example: "Read"
+      # database-backup-solutions: "Write"
+      # nosql-databases-comparison: "Admin"
+      # data-warehousing-best-practices: "Triage"
+      # database-performance-tuning: "Maintain"
+      
+      
+

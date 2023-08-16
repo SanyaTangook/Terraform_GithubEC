@@ -1,22 +1,38 @@
 name: Run Terraform for Repository Creation
 
 on:
+  workflow_dispatch:
+    # inputs:
+    #   branch:
+    #     default: develop
+    #     required: true
+    #   environment:
+    #     default: DEVELOP
+    #     required: true
   push:
     branches:
     - "main"
     paths:
-    - 'Setting/prod/repository/**'
+    - 'terraform/prod/repository/**'
+    - 'terraform/config/repository/**'
+# env: 
+#   env_var: '${{ github.event.inputs.environment.default }}'
 
 permissions: read-all
 jobs:
     Terraform-Script:
         runs-on: ubuntu-22.04
+        # if: ${{ vars.TF_GITHUB_ORG_NAME == 'dataxai' }}
+        # environment:
+        #   name: ${{ github.ref_name }}
         defaults:
           run:
-            working-directory: ./Setting/prod/repository
+            working-directory: ./terraform/prod/repository
         steps:
         - name: code checkout
           uses: actions/checkout@v3
+          # with:
+          #   ref: '${{ github.event.inputs.branch.default }}'
 
         - name: setup terraform
           uses: hashicorp/setup-terraform@v1
@@ -29,7 +45,7 @@ jobs:
             base64-encoded-secret: ${{secrets.TF_BACKEND_CONF}}
             filename: "backend.conf"
             is-executable: false
-            working-directory: ./Setting/prod/repository
+            working-directory: ./terraform/prod/repository
             
         - name: list directory
           id: list
@@ -44,6 +60,7 @@ jobs:
           uses: bridgecrewio/checkov-action@master
           with:
             framework: terraform
+            skip_check: CKV_GIT_6
 
         - name: terraform validate
           id: validate

@@ -1,0 +1,19 @@
+devops:          
+  member:
+    natpavin-rattanaviang_datax: "member"
+    apisitt-rattana_datax: "maintainer"
+    paweenruk-kotcharin_datax: "member"
+    pawinee-pitakwong_datax: "member"            
+  closed: true          
+  parent_team:    
+  description:  
+
+devops-mfec:
+  member:
+    dip00440_datax: "member"
+    dip00441_datax: "member"
+    dip00442_datax: "member" 
+    natpavin-rattanaviang_datax: "member"       
+  closed: true           
+  parent_team: "devops"       
+  description:

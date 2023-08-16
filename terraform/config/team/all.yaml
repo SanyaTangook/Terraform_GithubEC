@@ -1,0 +1,10 @@
+# team:
+datax-all:          
+  member:
+    natpavin-rattanaviang_datax: "member"
+    apisitt-rattana_datax: "maintainer"
+    paweenruk-kotcharin_datax: "member"
+    pawinee-pitakwong_datax: "member"     
+  closed: true           
+  parent_team:       
+  description: 

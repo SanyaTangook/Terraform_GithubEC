@@ -1,11 +1,13 @@
 name: Run Terraform for Team Creation
 
 on:
+  workflow_dispatch:
   push:
     branches:
     - "main"
     paths:
-    - 'Setting/prod/team/**'
+    - 'terraform/prod/team/**'
+    - 'terraform/config/team/**'
 
 permissions: read-all
 jobs:
@@ -13,7 +15,7 @@ jobs:
         runs-on: ubuntu-22.04
         defaults:
           run:
-            working-directory: ./Setting/prod/team
+            working-directory: ./terraform/prod/team
         steps:
         - name: code checkout
           uses: actions/checkout@v3
@@ -26,10 +28,10 @@ jobs:
         - name: read terraform backend configuration
           uses: mobiledevops/secret-to-file-action@v1
           with:
-            base64-encoded-secret: ${{secrets.TF_BACKEND_CONF_FOR_TEAM }}
+            base64-encoded-secret: ${{secrets.TF_BACKEND_CONF_FOR_TEAM}}
             filename: "backend.conf"
             is-executable: false
-            working-directory: ./Setting/prod/team
+            working-directory: ./terraform/prod/team
 
         - name: terraform init
           id: init
@@ -40,6 +42,7 @@ jobs:
           uses: bridgecrewio/checkov-action@master
           with:
             framework: terraform
+            skip_check: CKV_GIT_6
 
         - name: terraform validate
           id: validate

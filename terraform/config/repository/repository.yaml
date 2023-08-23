@@ -24,5 +24,3 @@ repository:
   devops-github-example: 
     branch: ["develop"]
     branch_protection: []
-
-

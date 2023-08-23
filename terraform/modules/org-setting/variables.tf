@@ -1,105 +1,30 @@
-variable "billing_email" {
-  type    = string
+variable "settings" {
+  type = map(object({
+    billing_email                                 = string
+    blog                                          = string
+    description                                   = string
+    location                                      = string
+    has_organization_projects                     = bool
+    has_repository_projects                       = bool
+    default_repository_permission                 = string
+    members_can_create_repositories               = bool
+    members_can_create_public_repositories        = bool
+    members_can_create_private_repositories       = bool
+    members_can_create_internal_repositories      = bool
+    members_can_create_pages                      = bool
+    members_can_create_public_pages               = bool
+    members_can_create_private_pages              = bool
+    members_can_fork_private_repositories         = bool
+    web_commit_signoff_required                   = bool
+    advanced_security_enabled_for_new_repositories = bool
+    dependabot_alerts_enabled_for_new_repositories = bool
+    dependabot_security_updates_enabled_for_new_repositories = bool
+    dependency_graph_enabled_for_new_repositories = bool
+    secret_scanning_enabled_for_new_repositories = bool
+    secret_scanning_push_protection_enabled_for_new_repositories = bool
+  }))
 }
 
-variable "blog" {
-  type    = string
-}
-
-variable "description" {
-  type    = string
-}
-
-variable "location" {
-  type    = string
-}
-
-variable "has_organization_projects" {
-  type    = bool
-  default = true
-}
-
-variable "has_repository_projects" {
-  type    = bool
-  default = true
-}
-
-variable "default_repository_permission" {
-  type    = string
-}
-
-variable "members_can_create_repositories" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_create_public_repositories" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_create_private_repositories" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_create_internal_repositories" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_create_pages" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_create_public_pages" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_create_private_pages" {
-  type    = bool
-  default = true
-}
-
-variable "members_can_fork_private_repositories" {
-  type    = bool
-  default = true
-}
-
-variable "web_commit_signoff_required" {
-  type    = bool
-  default = true
-}
-
-
-variable "advanced_security_enabled_for_new_repositories" {
-  type    = bool
-  default = false
-}
-
-variable "dependabot_alerts_enabled_for_new_repositories" {
-  type    = bool
-  default = false
-}
-
-variable "dependabot_security_updates_enabled_for_new_repositories" {
-  type    = bool
-  default = false
-}
-
-variable "dependency_graph_enabled_for_new_repositories" {
-  type    = bool
-  default = false
-}
-
-variable "secret_scanning_enabled_for_new_repositories" {
-  type    = bool
-  default = false
-}
-
-variable "secret_scanning_push_protection_enabled_for_new_repositories" {
-  type    = bool
-  default = false
+variable "team" {
+  type = list(string)
 }

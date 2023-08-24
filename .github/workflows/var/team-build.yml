@@ -1,0 +1,21 @@
+name: Run Terraform for Team Creation
+
+on:
+  push:
+    branches:
+      - "main"
+    paths:
+      - 'Setting/prod/team/**'
+
+permissions: read-all
+jobs:
+  Terraform-Script:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Terraform Init Steps
+        uses: ./.github/workflows/steps/terraform_init.yml
+        with:
+          backend-conf-secret: ${{ secrets.TF_BACKEND_CONF_FOR_TEAM }}
+          working-directory: ./Setting/prod/team
